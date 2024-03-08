@@ -67,8 +67,8 @@ function playGame() {
     let gameWins = 0;
     let gameLoses = 0
     // run 5 rounds of playRound and each win or lose store that result in the apropriate variable.
-    for (let i = 0; i < 5; i++) {
-        const playResult = playRound(getPlayerChoice(prompt("Please choose an option, rock, paper, or scissors: ")), getComputerChoice());
+    for (let i = 5; i > 0; i--) {
+        const playResult = playRound(getPlayerChoice(prompt(`We have ${i} rounds left!\n Please choose an option, rock, paper, or scissors: `)), getComputerChoice());
         if (playResult === "lose") {
             gameLoses+= 1;
         }
